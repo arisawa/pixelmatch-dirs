@@ -162,6 +162,8 @@ func main() {
 			fmt.Fprintf(w, "%s\t%s\t%s\n", dp.file, dp.pixels, dp.error)
 		}
 		w.Flush()
+	} else {
+		fmt.Println("Different images are nothing.")
 	}
 }
 
