@@ -26,7 +26,7 @@ var (
 	defaultSrcDir    = "src"
 	defaultTargetDir = "target"
 	tmpDir           = "tmp"
-	container        = "arisawa/pixelmatch:v5.1.0"
+	container        = "arisawa/pixelmatch:v5.1.0.1"
 )
 
 type diffPixel struct {
@@ -87,7 +87,7 @@ func main() {
 	}
 	for _, f := range files {
 		fileName := f.Name()
-		if !strings.HasSuffix(fileName, ".png") {
+		if !strings.HasSuffix(fileName, ".png") && !strings.HasSuffix(fileName, ".tif") {
 			continue
 		}
 
